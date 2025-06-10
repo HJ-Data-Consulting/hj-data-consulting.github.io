@@ -6,6 +6,25 @@ canvas.height = window.innerHeight;
 
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
+  
+  // Set initial theme from localStorage or default to light mode
+  const savedTheme = localStorage.getItem('theme') || 'light-mode';
+  document.body.classList.remove('dark-mode', 'light-mode');
+  document.body.classList.add(savedTheme);
+  
+  // Set toggle switch to match current theme
+  const toggleSwitch = document.getElementById('toggle-mode');
+  if (toggleSwitch) {
+    toggleSwitch.checked = savedTheme === 'dark-mode';
+    
+    // Add event listener to toggle switch
+    toggleSwitch.addEventListener('change', function() {
+      const newTheme = this.checked ? 'dark-mode' : 'light-mode';
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 });
 
 // Adjust the number of nodes based on screen width
@@ -80,10 +99,4 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('scrolled');
   }
-});
-
-// Toggle dark/light mode
-document.getElementById('toggle-mode').addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
-  document.body.classList.toggle('light-mode');
 });
