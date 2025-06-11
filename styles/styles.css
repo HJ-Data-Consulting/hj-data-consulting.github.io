@@ -500,6 +500,40 @@ hr {
   -webkit-transform: translateX(30px);
 }
 
+/* Form status messages */
+#form-status {
+  margin-bottom: 1.5rem;
+}
+
+.success-message {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #198754;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #dc3545;
+  margin-bottom: 1.5rem;
+}
+
+/* Hide honeypot field */
+.website-field {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
