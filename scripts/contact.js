@@ -1,27 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
-  const submitButton = document.querySelector('.submit-btn');
   const formStatus = document.getElementById('form-status');
-  
+
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      // Reset status message
-      if (formStatus) formStatus.innerHTML = '';
+      // Clear previous status messages
+      formStatus.innerHTML = '';
+      formStatus.className = '';
       
-      // Disable submit button to prevent multiple submissions
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending...';
+      // Show loading state
+      const submitBtn = contactForm.querySelector('.submit-btn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
       
       // Collect form data
       const formData = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        company: document.getElementById('company').value.trim(),
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
         service: document.getElementById('service').value,
-        message: document.getElementById('message').value.trim(),
-        website: document.getElementById('website').value // Honeypot field
+        message: document.getElementById('message').value,
+        website: document.getElementById('website').value 
       };
       
       try {
@@ -37,27 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const result = await response.json();
         
-        if (result.success) {
-          // Success
-          if (formStatus) {
-            formStatus.innerHTML = '<div class="success-message">Thank you! Your message has been sent successfully.</div>';
-          }
-          contactForm.reset();
+        if (response.ok && result.success) {
+          // Success! Redirect to thanks page
+          window.location.href = 'thanks.html';
         } else {
-          // Error
-          if (formStatus) {
-            formStatus.innerHTML = `<div class="error-message">${result.error || 'Something went wrong. Please try again.'}</div>`;
-          }
+          // Server returned an error
+          formStatus.textContent = result.error || 'Something went wrong. Please try again.';
+          formStatus.className = 'error';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
         }
       } catch (error) {
-        console.error('Form submission error:', error);
-        if (formStatus) {
-          formStatus.innerHTML = '<div class="error-message">Failed to send message. Please try again later.</div>';
-        }
-      } finally {
-        // Re-enable submit button
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
+        console.error('Error:', error);
+        formStatus.textContent = 'Network error. Please check your connection and try again.';
+        formStatus.className = 'error';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
       }
     });
   }
