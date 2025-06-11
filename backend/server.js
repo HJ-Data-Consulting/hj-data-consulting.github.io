@@ -41,6 +41,17 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Root route for documentation
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: 'HJ Data Consulting API', 
+    endpoints: {
+      '/api/contact': 'POST - Submit contact form',
+      '/health': 'GET - Health check'
+    }
+  });
+});
+
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
   try {

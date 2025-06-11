@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       
       try {
-        // Replace with your Render backend URL
-        const backendUrl = 'https://your-render-app-name.onrender.com/api/contact';
+        const backendUrl = 'https://main-52w5.onrender.com/api/contact';
         
         const response = await fetch(backendUrl, {
           method: 'POST',
