@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (response.ok && result.success) {
           // Success! Redirect to thanks page
-          window.location.href = '/thanks/';
+          window.location.href = '../thanks/index.html';
         } else {
           // Server returned an error
           formStatus.textContent = result.error || 'Something went wrong. Please try again.';
