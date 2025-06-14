@@ -7,24 +7,9 @@ canvas.height = window.innerHeight;
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
   
-  // Set initial theme from localStorage or default to light mode
-  const savedTheme = localStorage.getItem('theme') || 'light-mode';
-  document.body.classList.remove('dark-mode', 'light-mode');
-  document.body.classList.add(savedTheme);
-  
-  // Set toggle switch to match current theme
-  const toggleSwitch = document.getElementById('toggle-mode');
-  if (toggleSwitch) {
-    toggleSwitch.checked = savedTheme === 'dark-mode';
-    
-    // Add event listener to toggle switch
-    toggleSwitch.addEventListener('change', function() {
-      const newTheme = this.checked ? 'dark-mode' : 'light-mode';
-      document.body.classList.remove('dark-mode', 'light-mode');
-      document.body.classList.add(newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  }
+  // Dark mode toggle code removed - always use light mode
+  document.body.classList.remove('dark-mode');
+  document.body.classList.add('light-mode');
 });
 
 // Adjust the number of nodes based on screen width
@@ -39,9 +24,9 @@ const nodes = Array.from({ length: nodeCount }, () => ({
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  const nodeColor = isDarkMode ? '#eee' : '#111';
-  const lineColor = isDarkMode ? 'rgba(238, 238, 238,' : 'rgba(17, 17, 17,';
+  // Always use light mode color scheme
+  const nodeColor = '#111';
+  const lineColor = 'rgba(17, 17, 17,';
 
   nodes.forEach(node => {
     node.x += node.vx;
