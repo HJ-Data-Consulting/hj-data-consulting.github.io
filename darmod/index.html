@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaRMoD Health-Tech Collaboration | Join Our Team</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #2a5caa;
+            --secondary-color: #5c88c5;
+            --accent-color: #f8f9fa;
+            --text-color: #333333;
+            --light-text: #ffffff;
+            --background-color: #ffffff;
+            --border-color: #e0e0e0;
+            --success-color: #28a745;
+            --error-color: #dc3545;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42, 92, 170, 0.8), rgba(42, 92, 170, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-text);
+            text-align: center;
+            padding: 120px 20px 80px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--accent-color);
+        }
+
+        /* Use Case Section */
+        .use-case {
+            background-color: var(--background-color);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--accent-color);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background-color: var(--background-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Form Section */
+        .join-form {
+            background-color: var(--background-color);
+        }
+
+        form {
+            display: grid;
+            grid-gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input, textarea, select {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            cursor:not-allowed;
+        }
+
+        .form-status {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .success {
+            background-color: var(--success-color);
+            color: var(--light-text);
+        }
+
+        .error {
+            background-color: var(--error-color);
+            color: var(--light-text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: var(--light-text);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">DaRMoD Project</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Join Our Team: DaRMoD Health-Tech Collaboration</h1>
+            <p>Be part of an innovative project at the intersection of healthcare and artificial intelligence with Vector Institute's support</p>
+        </div>
+    </section>
+
+    <!-- About DaRMoD Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About DaRMoD Program</h2>
+            <div class="section-content">
+                <p>The Data & AI Resources for Model Deployment (DaRMoD) is a specialized 4-month program offered by the Vector Institute. It's designed to guide Small and Medium Enterprises (SMEs) through the practical implementation of machine learning use cases with expert guidance.</p>
+                <p>Building on Vector's successful FastLane initiative, DaRMoD helps businesses bridge the gap between theoretical AI knowledge and real-world applications. The program provides structured learning, mentorship, and hands-on experience that culminates in a Vector Institute certification.</p>
+                <p>DaRMoD's purpose is to accelerate AI adoption across industries by providing companies with the tools, knowledge, and support needed to successfully implement and deploy machine learning solutions that address specific business challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case Section -->
+    <section class="use-case" id="use-case">
+        <div class="container">
+            <h2>Our Use Case</h2>
+            <div class="section-content">
+                <p>We are developing a cutting-edge health-tech solution for Ontario's healthcare system that leverages artificial intelligence and responsible design principles. Our project aims to improve patient outcomes, optimize healthcare resource allocation, and enhance decision-making processes for healthcare providers.</p>
+                <p>Through the DaRMoD program, we're combining domain expertise in healthcare with advanced AI methodologies to create a solution that addresses real-world challenges in the Ontario healthcare landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>What You'll Gain</h2>
+            <div class="section-content">
+                <p>Joining our DaRMoD collaboration offers valuable opportunities for professional growth and real-world impact:</p>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Advanced AI Exposure</h3>
+                        <p>Get hands-on experience with cutting-edge AI methodologies and learn how to apply them to solve complex healthcare challenges.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Vector Institute Resources</h3>
+                        <p>Access world-class lectures, tutorials, and learning materials from the Vector Institute, one of Canada's leading AI research organizations.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Industry Certification</h3>
+                        <p>Earn a Vector-issued Data Certification upon completion of the program, enhancing your credentials in the AI and machine learning field.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Healthcare Impact</h3>
+                        <p>Contribute to a project with real-world impact on Ontario's healthcare system and help improve patient outcomes through innovative technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="join-form" id="join">
+        <div class="container">
+            <h2>Join the Team</h2>
+            <div class="section-content">
+                <p>Interested in collaborating on our DaRMoD health-tech project? Fill out the form below to express your interest and tell us about yourself.</p>
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Brief Bio</label>
+                        <textarea id="bio" name="bio" placeholder="Tell us about your background, skills, and experience" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Background Interest</label>
+                        <select id="interest" name="interest" required>
+                            <option value="" disabled selected>Select your primary area of interest</option>
+                            <option value="healthcare">Healthcare/Medical</option>
+                            <option value="data_science">Data Science/Analytics</option>
+                            <option value="machine_learning">Machine Learning/AI</option>
+                            <option value="software">Software Development</option>
+                            <option value="product">Product Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button disabled type="submit">Submit Application</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/hj-data-consulting/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p>For more information about our DaRMoD project or the application process, please contact us at <a href="mailto:contact@hjdataconsulting.com">contact@hjdataconsulting.com</a></p>
+            <p class="copyright">© <span id="currentYear"></span> HJ Data Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript for form handling and other functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Form handling
+            const applicationForm = document.getElementById('applicationForm');
+            const formStatus = document.getElementById('formStatus');
+            
+            applicationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                formStatus.textContent = "Application submitted successfully! We'll be in touch soon.";
+                formStatus.className = "form-status success";
+                formStatus.style.display = "block";
+                
+                // Reset form after submission
+                applicationForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = "none";
+                }, 5000);
+                
+                // In a real application, you would send the form data to a server here
+                // const formData = new FormData(applicationForm);
+                // fetch('/submit-application', {
+                //     method: 'POST',
+                //     body: formData
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     if (data.success) {
+                //         formStatus.textContent = "Application submitted successfully! We'll be in touch soon.";
+                //         formStatus.className = "form-status success";
+                //         applicationForm.reset();
+                //     } else {
+                //         formStatus.textContent = data.message || "There was an error submitting your application. Please try again.";
+                //         formStatus.className = "form-status error";
+                //     }
+                //     formStatus.style.display = "block";
+                // })
+                // .catch(error => {
+                //     formStatus.textContent = "There was an error submitting your application. Please try again.";
+                //     formStatus.className = "form-status error";
+                //     formStatus.style.display = "block";
+                // });
+            });
+        });
+    </script>
+</body>
+
+</html>
