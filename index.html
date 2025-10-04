@@ -81,10 +81,18 @@
       <div class="trusted-by-content">
         <p class="trusted-by-text">Trusted by teams at</p>
         <div class="company-logos">
-          <img src="./assets/logos/AWTO.svg" alt="Company 1" class="company-logo">
-          <img src="./assets/logos/edc_logo.svg.png" alt="Company 2" class="company-logo">
-          <img src="./assets/logos/creativefutures.png" alt="Company 3" class="company-logo">
-          <img src="./assets/logos/soho.png" alt="Company 4" class="company-logo">
+          <a href="#" class="company-logo-link" target="_blank">
+            <img src="./assets/logos/AWTO.svg" alt="AWTO" class="company-logo" onerror="console.log('AWTO logo failed to load'); this.style.display='none';">
+          </a>
+          <a href="#" class="company-logo-link" target="_blank">
+            <img src="./assets/logos/edc_logo.svg.png" alt="EDC" class="company-logo">
+          </a>
+          <a href="#" class="company-logo-link" target="_blank">
+            <img src="./assets/logos/creativefutures.png" alt="Creative Futures" class="company-logo">
+          </a>
+          <a href="#" class="company-logo-link" target="_blank">
+            <img src="./assets/logos/soho.png" alt="Soho" class="company-logo">
+          </a>
         </div>
       </div>
     </div>
@@ -137,27 +145,18 @@
       </div>
     </div>
 
-    <!-- About Section -->
-    <div class="about-container" id="about">
-      <h1>About</h1>
-      <div class="about-content">
-        <div class="about-text">
-          <p>With over a decade combined of years of experience in data engineering and analytics, we help businesses harness the power of their data to drive growth, innovation, and competitive advantage.</p>
-          
-          <p>Our approach combines technical expertise in data systems with AI implementation knowledge, creating solutions that transform raw data into valuable business insights and automated processes.</p>
-          
-          <p>Whether you're looking to build data pipelines, implement AI solutions, create analytics dashboards, or develop data-driven applications, we provide the expertise needed for successful digital transformation.</p>
-          
-          <h3>Core Technologies:</h3>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">SQL/NoSQL</span>
-            <span class="tech-tag">Data Engineering</span>
-            <span class="tech-tag">Machine Learning</span>
-            <span class="tech-tag">LLMs/GPT</span>
-            <span class="tech-tag">ETL/ELT</span>
-            <span class="tech-tag">AWS/Cloud</span>
-            <span class="tech-tag">JavaScript/React</span>
+    <!-- Team Section -->
+    <div class="team-container" id="team">
+      <h1>Team</h1>
+      <div class="team-content">
+        <div class="team-member">
+          <div class="member-photo">
+            <img src="./assets/bio.jpeg" alt="Herman Justino" class="member-image">
+          </div>
+          <div class="member-bio">
+            <h3>Herman Justino</h3>
+            <p class="member-title">Founder & Lead Data Consultant</p>
+            <p>With a background in software engineering and a passion for data, I specialize in transforming complex information into meaningful insights. I combine technical expertise with thoughtful design to create solutions that are both powerful and interactive.</p>
           </div>
         </div>
       </div>
@@ -213,5 +212,4 @@
   <script src="./scripts/neural-network.js"></script>
   <script src="./scripts/nav.js"></script>
 </body>
-
 </html>
