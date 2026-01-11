@@ -2,19 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: var(--text-color);
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  background-color: var(--card-bg);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-item {
@@ -34,19 +37,23 @@
 
 /* Updated icon visibility rules */
 .brand-icon.dark-mode-icon {
-  display: none; /* Hide dark mode icon by default (in light mode) */
+  display: none;
+  /* Hide dark mode icon by default (in light mode) */
 }
 
 .brand-icon.light-mode-icon {
-  display: inline-block; /* Show light mode icon by default */
+  display: inline-block;
+  /* Show light mode icon by default */
 }
 
 .dark-mode .brand-icon.dark-mode-icon {
-  display: inline-block; /* Show dark mode icon when in dark mode */
+  display: inline-block;
+  /* Show dark mode icon when in dark mode */
 }
 
 .dark-mode .brand-icon.light-mode-icon {
-  display: none; /* Hide light mode icon when in dark mode */
+  display: none;
+  /* Hide light mode icon when in dark mode */
 }
 
 .navbar-links ul {

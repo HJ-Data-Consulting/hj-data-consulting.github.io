@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HJ Data Consulting</title>
-  
- <!-- Google Analytics -->
+
+  <!-- Google Analytics -->
+  <!-- Google Fonts for Apple-style typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MG8TTZHV6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-2MG8TTZHV6');
   </script>
-  
+
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/nav.css">
@@ -25,7 +32,8 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="HJ Data Consulting">
-  <meta property="og:description" content="Expert data consulting solutions for modern businesses. From data pipelines to AI implementation and analytics.">
+  <meta property="og:description"
+    content="Cloud architecture and data engineering for modern businesses. Google for Startups Cloud Program partner.">
   <meta property="og:image" content="./assets/og-image.jpg">
   <meta property="og:url" content="https://hjdconsulting.ca">
   <meta property="og:type" content="website">
@@ -48,6 +56,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="./use-cases/index.html">Use Cases</a></li>
         <li><a href="./about/">About</a></li>
         <li><a href="./blog/">Blog</a></li>
         <li><a href="./contact/">Contact</a></li>
@@ -57,8 +66,8 @@
   <div class="center-content">
     <div class="hero-container" id="home">
       <div class="hero">
-        <h1>HJ Data Consulting</h1>
-        <p class="typewriter">Data & AI Consulting</p>
+        <h1>HJ Consulting</h1>
+        <p class="typewriter">Data Solutions</p>
         <hr>
         <div class="social-links">
           <a href="https://github.com/HJ-Data-Consulting" target="_blank">
@@ -68,7 +77,7 @@
             <img src="./assets/linkedin-light.svg" alt="LinkedIn" class="icon">
           </a>
         </div>
-        <p class="hero-paragraph">Building interactive, digital data tools.</p>
+        <p class="hero-paragraph">Cloud architecture and data engineering for modern businesses.</p>
         <div class="cta-buttons">
           <a href="#services" class="cta-button primary">Our Services</a>
           <a href="./contact/index.html" class="cta-button secondary">Get a Quote</a>
@@ -81,8 +90,10 @@
       <div class="trusted-by-content">
         <p class="trusted-by-text">Trusted by teams at</p>
         <div class="company-logos">
-          <a href="https://torontoartsfoundation.org/programs/artworksto-youth/" class="company-logo-link" target="_blank">
-            <img src="./assets/logos/AWTO.svg" alt="AWTO" class="company-logo" onerror="console.log('AWTO logo failed to load'); this.style.display='none';">
+          <a href="https://torontoartsfoundation.org/programs/artworksto-youth/" class="company-logo-link"
+            target="_blank">
+            <img src="./assets/logos/AWTO.svg" alt="AWTO" class="company-logo"
+              onerror="console.log('AWTO logo failed to load'); this.style.display='none';">
           </a>
           <a href="https://environmentaldefence.ca" class="company-logo-link" target="_blank">
             <img src="./assets/logos/edc_logo.svg.png" alt="EDC" class="company-logo">
@@ -100,65 +111,66 @@
     <!-- Services Section -->
     <div class="services-container" id="services">
       <h1>Services</h1>
-      <h4>Data-driven solutions for modern businesses</h4>
-      
+      <h4>Engineering systems that survive reality</h4>
+
       <div class="services-grid">
         <div class="service-card">
           <div class="service-card-content">
-            <h3>Data Strategy & Organization</h3>
+            <h3>Technical Strategy & Infrastructure</h3>
             <ul>
-              <li>Clean, structure, and organize messy data</li>
-              <li>Build sustainable data pipelines for ongoing use</li>
+              <li>High-impact decisions for technical and organizational scale</li>
+              <li>Architecture designed for reliability, efficiency, and longevity</li>
             </ul>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-card-content">
-            <h3>Data Visualization & Storytelling</h3>
+            <h3>Reliability Engineering</h3>
             <ul>
-              <li>Create dashboards, reports, and visuals tailored to your audience</li>
-              <li>Transform static datasets into interactive graphics and web experiences</li>
+              <li>Implementing resilient systems that fail gracefully</li>
+              <li>SRE principles tailored for business growth and stability</li>
             </ul>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-card-content">
-            <h3>Custom Interactive Tools</h3>
+            <h3>Cloud Infrastructure</h3>
             <ul>
-              <li>Design quizzes, maps, and games that engage communities</li>
-              <li>Build digital assets for websites, newsletters, and social media</li>
+              <li>Scalable abstractions for mission-critical data lifecycles</li>
+              <li>Cloud environments built for performance and security</li>
             </ul>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-card-content">
-            <h3>Research & Analytics</h3>
+            <h3>Engineering Frameworks</h3>
             <ul>
-              <li>Analyze survey and program data for actionable insights</li>
-              <li>Identify trends to support decision-making and grant applications</li>
+              <li>Proven methodologies for high-scale environments</li>
+              <li>A consistent standard for engineering excellence</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Team Section -->
-    <div class="team-container" id="team">
-      <h1>Team</h1>
-      <div class="team-content">
-        <div class="team-member">
-          <div class="member-photo">
-            <img src="./assets/bio.jpeg" alt="Herman Justino" class="member-image">
-          </div>
-          <div class="member-bio">
-            <h3>Herman Justino</h3>
-            <p class="member-title">Founder & Lead Data Consultant</p>
-            <p>With a background in software engineering and a passion for data, I specialize in transforming complex information into meaningful insights. I combine technical expertise with thoughtful design to create solutions that are both powerful and interactive.</p>
-          </div>
+    <!-- Use Cases Preview Section -->
+    <div class="use-cases-preview-container" id="use-cases">
+      <h1>Use Cases</h1>
+      <h4>Proven applications of cloud and data engineering</h4>
+
+      <div class="use-case-preview-card">
+        <div class="preview-content">
+          <h3>Cloud Workstation Migration</h3>
+          <p>Unlocking global scale by migrating local workflows to high-performance cloud environments.</p>
+          <a href="./use-cases/index.html" class="text-link">Read the full case study →</a>
         </div>
+      </div>
+
+      <div class="cta-container">
+        <a href="./use-cases/index.html" class="cta-button secondary">View All Use Cases</a>
       </div>
     </div>
 
@@ -175,6 +187,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="./use-cases/index.html">Use Cases</a></li>
             <li><a href="./about/">About</a></li>
             <li><a href="./blog/">Blog</a></li>
             <li><a href="./contact/">Contact</a></li>
@@ -183,10 +196,10 @@
         <div class="footer-services">
           <h4>Services</h4>
           <ul>
-            <li><a href="#services">AI & Prompt Engineering</a></li>
+            <li><a href="#services">Cloud Architecture</a></li>
+            <li><a href="#services">Reliability Engineering</a></li>
             <li><a href="#services">Data Engineering</a></li>
-            <li><a href="#services">Data Science & Analytics</a></li>
-            <li><a href="#services">Web & Mobile Development</a></li>
+            <li><a href="#services">System Design</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -212,4 +225,5 @@
   <script src="./scripts/neural-network.js"></script>
   <script src="./scripts/nav.js"></script>
 </body>
+
 </html>

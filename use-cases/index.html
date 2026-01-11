@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases - HJ Consulting</title>
+
+    <!-- Google Fonts for Apple-style typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MG8TTZHV6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2MG8TTZHV6');
+    </script>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+
+    <link rel="icon" href="../assets/icon-light-mode.svg?v=1.0" type="image/svg+xml">
+    <link rel="icon" href="../assets/icon-light-mode.svg?v=1.0" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/icon-light-mode.svg?v=1.0">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Use Cases - HJ Consulting">
+    <meta property="og:description" content="Applied solutions in cloud architecture and data engineering.">
+    <meta property="og:image" content="../assets/og-image.jpg">
+    <meta property="og:url" content="https://hjdconsulting.ca/use-cases">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HJ Consulting">
+</head>
+
+<body class="light-mode">
+    <nav class="navbar">
+        <a href="../index.html#home" class="navbar-item">
+            <img src="../assets/icon-dark-mode.svg" alt="Dark Mode Icon" class="brand-icon dark-mode-icon">
+            <img src="../assets/icon-light-mode.svg" alt="Light Mode Icon" class="brand-icon light-mode-icon">
+        </a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="./index.html">Use Cases</a></li>
+                <li><a href="../about/">About</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="center-content">
+        <div class="use-cases-container">
+            <h1 class="section-title">Use Cases</h1>
+            <p class="section-subtitle">Real-world applications of mission-critical architecture.</p>
+
+            <div class="use-cases-grid">
+                <!-- Workstation Migration Use Case -->
+                <div class="use-case-card featured">
+                    <div class="use-case-content">
+                        <span class="case-tag">Cloud Transformation</span>
+                        <h2>Enterprise Cloud Workstation Migration</h2>
+                        <p>Moving local workstations to a centralized cloud environment to unlock global
+                            scale and unified security.</p>
+
+                        <div class="case-details">
+                            <h3>The Challenge</h3>
+                            <p>Teams struggling with disparate local hardware, inconsistent development environments,
+                                and high latency when accessing centralized data lakes.</p>
+
+                            <h3>The Solution</h3>
+                            <p>Designed a custom cloud workstation architecture that provides every employee with a
+                                standardized, high-performance environment accessible from anywhere. By leveraging
+                                cloud-native networking and IAM, the entire organization gained the ability to harness
+                                the cloud's full compute power from simple thin clients.</p>
+
+                            <h3>Impact</h3>
+                            <ul>
+                                <li><strong>Unified Lifecycle:</strong> Instant provisioning and teardown of dev
+                                    environments.</li>
+                                <li><strong>Security:</strong> Zero data stored on local devices; all IP remains within
+                                    the secure cloud perimeter.</li>
+                                <li><strong>Performance:</strong> Near-zero latency to compute resources and data
+                                    stores.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more use cases here later -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="./index.html">Use Cases</a></li>
+                        <li><a href="../about/">About</a></li>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../index.html#services">Technical Strategy</a></li>
+                        <li><a href="../index.html#services">Reliability Engineering</a></li>
+                        <li><a href="../index.html#services">Cloud Infrastructure</a></li>
+                        <li><a href="../index.html#services">Data Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4><a href="../contact/index.html">Contact</a></h4>
+                    <p>Toronto, Canada</p>
+                    <div class="social-links footer-social">
+                        <a href="https://github.com/HJ-Data-Consulting" target="_blank">
+                            <img src="../assets/github-light.svg" alt="GitHub" class="icon">
+                        </a>
+                        <a href="https://www.linkedin.com/company/hj-data-consulting/" target="_blank">
+                            <img src="../assets/linkedin-light.svg" alt="LinkedIn" class="icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© HJ Consulting <span id="currentYear"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <canvas id="neural-network"></canvas>
+    <script src="../scripts/neural-network.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

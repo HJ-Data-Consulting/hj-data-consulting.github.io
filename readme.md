@@ -1,28 +1,22 @@
-# HJ Data Consulting Portfolio Website
+# HJ Consulting - Elite Cloud Architecture
 
-This repository contains the source code for HJ Data Consulting's portfolio website, showcasing our data consulting services and capabilities.
+This repository contains the source code for Herman Justino's professional practice, focused on elite cloud architecture and reliability engineering. 
 
-## Services
+Everything here follows the philosophical foundations laid out in our [internal context](https://github.com/HJ-Data-Consulting/core-ops): building systems with judgment, restraint, and architectural taste.
 
-- **AI & Prompt Engineering** - Custom AI solutions, LLM integration, RAG workflows, and prompt engineering
-- **Data Engineering & Pipelines** - Data pipeline development, ETL processes, automation solutions
-- **Data Science & Analytics** - Advanced analytics, visualization, machine learning, business intelligence
-- **Web & Mobile Development** - Data-driven applications and digital solutions
+## Practice Areas
 
-## Technologies
+- **Elite Cloud Architecture** - Decisions that scale socially and technically. Designing for failure, cost, and human operators.
+- **Cloud Reliability Engineering** - Implementing systems that fail honestly. SRE principles applied to growth-stage startups.
+- **Data Infrastructure at Scale** - Sound abstractions for complex data lifecycles. Principled tradeoffs for GCP-native environments.
+- **The Decision Feed** - A public, compounding proof of architectural taste. Distilling raw engineering into defensible artifacts.
 
-The website is built using:
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Canvas for interactive elements
+## Technical Foundation
 
-## Development
-
-1. Clone this repository
-2. Open `index.html` in your browser to view the site locally
-3. Edit the HTML, CSS, or JavaScript files as needed
+- **Platform:** Google Cloud Program (Founder partner)
+- **Stack:** Next.js, TypeScript, Tailwind (Modernizing towards)
+- **Legacy:** This portfolio is built with Vanilla HTML/CSS/JS to demonstrate simplicity and control.
 
 ## Deployment
 
-The site can be deployed to any static website hosting service such as GitHub Pages, Netlify, or Vercel.
+The site is hosted on GitHub Pages and served at [hjdconsulting.ca](https://hjdconsulting.ca).
